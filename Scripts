@@ -181,44 +181,12 @@ local function RKKR_fake_script() -- AntiAFK.LocalScript
 		})
 	end)
 end
-coroutine.wrap(RKKR_fake_script)()
-local function QHHTR_fake_script() -- Tutorial.Script 
-	local script = Instance.new('Script', Tutorial)
-
-	while true do
-		script.Parent.TextColor3 = Color3.new(255/255,0/255,0/255)
-		for i = 0,255,10 do
-			wait()
-			script.Parent.TextColor3 = Color3.new(255/255,i/255,0/255)
-		end
-		for i = 255,0,-10 do
-			wait()
-			script.Parent.TextColor3 = Color3.new(i/255,255/255,0/255)
-		end
-		for i = 0,255,10 do
-			wait()
-			script.Parent.TextColor3 = Color3.new(0/255,255/255,i/255)
-		end
-		for i = 255,0,-10 do
-			wait()
-			script.Parent.TextColor3 = Color3.new(0/255,i/255,255/255)
-		end
-		for i = 0,255,10 do
-			wait()
-			script.Parent.TextColor3 = Color3.new(i/255,0/255,255/255)
-		end
-		for i = 255,0,-10 do 
-			wait()
-			script.Parent.TextColor3 = Color3.new(255/255,0/255,i/255)
-		end
-		 end
-end
 coroutine.wrap(QHHTR_fake_script)()
-local function TJCUHIC_fake_script() -- Main.Visible 
+local function TJCUHIC_fake_script()
 	local script = Instance.new('LocalScript', Main)
 
 	local frame = script.Parent.Parent.Main
-	local hotkey = Enum.KeyCode.Q
+	local hotkey = Enum.KeyCode.V
 	
 	local UIS = game:GetService("UserInputService")
 	local open = false
