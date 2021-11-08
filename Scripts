@@ -1,0 +1,79 @@
+local TradeTower = Instance.new("ScreenGui")
+local Main = Instance.new("ImageLabel")
+local AutoClick = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+local background = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local UICorner_3 = Instance.new("UICorner")
+
+TradeTower.Name = "TradeTower"
+TradeTower.Parent = game.CoreGui
+TradeTower.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Main.Name = "Main"
+Main.Parent = TradeTower
+Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Main.BackgroundTransparency = 1.000
+Main.BorderSizePixel = 0
+Main.Position = UDim2.new(0.887106776, 0, 0.447852671, 0)
+Main.Size = UDim2.new(0.103954963, 0, 0.311092049, 0)
+Main.Image = "rbxassetid://4871257726"
+Main.ImageColor3 = Color3.fromRGB(115, 115, 115)
+Main.Active = true
+Main.Draggable = true
+
+AutoClick.Name = "AutoClick"
+AutoClick.Parent = Main
+AutoClick.BackgroundColor3 = Color3.fromRGB(0, 174, 255)
+AutoClick.BorderSizePixel = 0
+AutoClick.Position = UDim2.new(0.100866601, 0, 0.446601897, 0)
+AutoClick.Size = UDim2.new(0.797421396, 0, 0.102912635, 0)
+AutoClick.Font = Enum.Font.FredokaOne
+AutoClick.Text = "AutoClick"
+AutoClick.TextColor3 = Color3.fromRGB(0, 17, 255)
+AutoClick.TextScaled = true
+AutoClick.TextSize = 14.000
+AutoClick.TextWrapped = true
+
+UICorner.CornerRadius = UDim.new(0, 9)
+UICorner.Parent = AutoClick
+
+background.Name = "background"
+background.Parent = AutoClick
+background.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+background.BorderSizePixel = 0
+background.Position = UDim2.new(0, 0, 1.26898479, 0)
+background.Size = UDim2.new(1, 0, 0.358490556, 0)
+
+UICorner_2.CornerRadius = UDim.new(0, 9)
+UICorner_2.Parent = background
+
+UICorner_3.CornerRadius = UDim.new(0, 25)
+UICorner_3.Parent = Main
+
+local function LCBBKHI_fake_script()
+	local script = Instance.new('LocalScript', AutoClick)
+
+	local Background = script.Parent.background
+	
+	_G.autoclick = false
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if _G.autoclick == false and Background.BackgroundColor3 == Color3.fromRGB(255, 0, 0) then
+			_G.autoclcik = true
+			Background.BackgroundColor3 = Color3.fromRGB(0, 255, 81)
+			while true do
+				local Event = game:GetService("ReplicatedStorage").Events.ClientClick
+				Event:FireServer()
+				wait(.1)
+				if _G.autoclick == false and Background.BackgroundColor3 == Color3.fromRGB(255, 0, 0) then
+					break
+				end
+			end
+		else
+			_G.autoclick = false
+			Background.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+		end
+	end)
+end
+coroutine.wrap(LCBBKHI_fake_script)()
