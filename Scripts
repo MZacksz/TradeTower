@@ -5,6 +5,12 @@ local UICorner = Instance.new("UICorner")
 local background = Instance.new("Frame")
 local UICorner_2 = Instance.new("UICorner")
 local UICorner_3 = Instance.new("UICorner")
+local Title = Instance.new("TextLabel")
+local AntiAFK = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local UIGradient = Instance.new("UIGradient")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+local Tutorial = Instance.new("TextLabel")
 
 TradeTower.Name = "TradeTower"
 TradeTower.Parent = game.CoreGui
@@ -15,8 +21,8 @@ Main.Parent = TradeTower
 Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Main.BackgroundTransparency = 1.000
 Main.BorderSizePixel = 0
-Main.Position = UDim2.new(0.887106776, 0, 0.447852671, 0)
-Main.Size = UDim2.new(0.103954963, 0, 0.311092049, 0)
+Main.Position = UDim2.new(0.838988364, 0, 0.392637938, 0)
+Main.Size = UDim2.new(0.131098717, 0, 0.285289586, 0)
 Main.Image = "rbxassetid://4871257726"
 Main.ImageColor3 = Color3.fromRGB(115, 115, 115)
 Main.Active = true
@@ -26,7 +32,7 @@ AutoClick.Name = "AutoClick"
 AutoClick.Parent = Main
 AutoClick.BackgroundColor3 = Color3.fromRGB(0, 174, 255)
 AutoClick.BorderSizePixel = 0
-AutoClick.Position = UDim2.new(0.100866601, 0, 0.446601897, 0)
+AutoClick.Position = UDim2.new(0.100866601, 0, 0.202064574, 0)
 AutoClick.Size = UDim2.new(0.797421396, 0, 0.102912635, 0)
 AutoClick.Font = Enum.Font.FredokaOne
 AutoClick.Text = "AutoClick"
@@ -51,7 +57,56 @@ UICorner_2.Parent = background
 UICorner_3.CornerRadius = UDim.new(0, 25)
 UICorner_3.Parent = Main
 
-local function LCBBKHI_fake_script()
+Title.Name = "Title"
+Title.Parent = Main
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.Position = UDim2.new(-0.00368607789, 0, 0, 0)
+Title.Size = UDim2.new(1.02967191, 0, 0.11438071, 0)
+Title.Font = Enum.Font.FredokaOne
+Title.Text = "Trade Tower"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextWrapped = true
+
+AntiAFK.Name = "AntiAFK"
+AntiAFK.Parent = Main
+AntiAFK.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AntiAFK.BorderSizePixel = 0
+AntiAFK.Position = UDim2.new(0.100866601, 0, 0.418992847, 0)
+AntiAFK.Size = UDim2.new(0.797421396, 0, 0.102912635, 0)
+AntiAFK.Font = Enum.Font.FredokaOne
+AntiAFK.Text = "Anti AFK"
+AntiAFK.TextColor3 = Color3.fromRGB(0, 0, 0)
+AntiAFK.TextScaled = true
+AntiAFK.TextSize = 14.000
+AntiAFK.TextWrapped = true
+
+UICorner_4.CornerRadius = UDim.new(0, 9)
+UICorner_4.Parent = AntiAFK
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 179, 0))}
+UIGradient.Rotation = 90
+UIGradient.Parent = AntiAFK
+
+UIAspectRatioConstraint.Parent = Main
+UIAspectRatioConstraint.DominantAxis = Enum.DominantAxis.Height
+
+Tutorial.Name = "Tutorial"
+Tutorial.Parent = Main
+Tutorial.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Tutorial.BackgroundTransparency = 1.000
+Tutorial.Position = UDim2.new(0.165716887, 0, 0.767019033, 0)
+Tutorial.Size = UDim2.new(0.662632167, 0, 0.204747275, 0)
+Tutorial.Font = Enum.Font.FredokaOne
+Tutorial.Text = "V to visible or unvisible"
+Tutorial.TextColor3 = Color3.fromRGB(255, 255, 255)
+Tutorial.TextScaled = true
+Tutorial.TextSize = 14.000
+Tutorial.TextWrapped = true
+
+local function EAJW_fake_script()
 	local script = Instance.new('LocalScript', AutoClick)
 
 	local Background = script.Parent.background
@@ -76,4 +131,110 @@ local function LCBBKHI_fake_script()
 		end
 	end)
 end
-coroutine.wrap(LCBBKHI_fake_script)()
+coroutine.wrap(EAJW_fake_script)()
+local function MFPUUSV_fake_script()
+	local script = Instance.new('Script', Title)
+
+	while true do
+		script.Parent.TextColor3 = Color3.new(255/255,0/255,0/255)
+		for i = 0,255,10 do
+			wait()
+			script.Parent.TextColor3 = Color3.new(255/255,i/255,0/255)
+		end
+		for i = 255,0,-10 do
+			wait()
+			script.Parent.TextColor3 = Color3.new(i/255,255/255,0/255)
+		end
+		for i = 0,255,10 do
+			wait()
+			script.Parent.TextColor3 = Color3.new(0/255,255/255,i/255)
+		end
+		for i = 255,0,-10 do
+			wait()
+			script.Parent.TextColor3 = Color3.new(0/255,i/255,255/255)
+		end
+		for i = 0,255,10 do
+			wait()
+			script.Parent.TextColor3 = Color3.new(i/255,0/255,255/255)
+		end
+		for i = 255,0,-10 do 
+			wait()
+			script.Parent.TextColor3 = Color3.new(255/255,0/255,i/255)
+		end
+		 end
+end
+coroutine.wrap(MFPUUSV_fake_script)()
+local function RKKR_fake_script() -- AntiAFK.LocalScript 
+	local script = Instance.new('LocalScript', AntiAFK)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local vu = game:GetService("VirtualUser")
+		game:GetService("Players").LocalPlayer.Idled:connect(function()
+			vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+			wait(1)
+			vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+		end)
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "Anti AFK Mode";
+			Text = "Enable - Anti Afk";
+			Duration = 20;
+		})
+	end)
+end
+coroutine.wrap(RKKR_fake_script)()
+local function QHHTR_fake_script() -- Tutorial.Script 
+	local script = Instance.new('Script', Tutorial)
+
+	while true do
+		script.Parent.TextColor3 = Color3.new(255/255,0/255,0/255)
+		for i = 0,255,10 do
+			wait()
+			script.Parent.TextColor3 = Color3.new(255/255,i/255,0/255)
+		end
+		for i = 255,0,-10 do
+			wait()
+			script.Parent.TextColor3 = Color3.new(i/255,255/255,0/255)
+		end
+		for i = 0,255,10 do
+			wait()
+			script.Parent.TextColor3 = Color3.new(0/255,255/255,i/255)
+		end
+		for i = 255,0,-10 do
+			wait()
+			script.Parent.TextColor3 = Color3.new(0/255,i/255,255/255)
+		end
+		for i = 0,255,10 do
+			wait()
+			script.Parent.TextColor3 = Color3.new(i/255,0/255,255/255)
+		end
+		for i = 255,0,-10 do 
+			wait()
+			script.Parent.TextColor3 = Color3.new(255/255,0/255,i/255)
+		end
+		 end
+end
+coroutine.wrap(QHHTR_fake_script)()
+local function TJCUHIC_fake_script() -- Main.Visible 
+	local script = Instance.new('LocalScript', Main)
+
+	local frame = script.Parent.Parent.Main
+	local hotkey = Enum.KeyCode.Q
+	
+	local UIS = game:GetService("UserInputService")
+	local open = false
+	
+	UIS.InputBegan:Connect(function(key, gp)
+		if key.KeyCode == hotkey then
+			if UIS:GetFocusedTextBox() == nil then
+				if open == false then
+					open = true 
+					frame.Visible = open
+				elseif open == true then
+					open = false
+					frame.Visible = open
+				end
+			end
+		end
+	end)
+end
+coroutine.wrap(TJCUHIC_fake_script)()
