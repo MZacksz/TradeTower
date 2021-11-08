@@ -25,8 +25,6 @@ Main.Position = UDim2.new(0.838988364, 0, 0.392637938, 0)
 Main.Size = UDim2.new(0.131098717, 0, 0.285289586, 0)
 Main.Image = "rbxassetid://4871257726"
 Main.ImageColor3 = Color3.fromRGB(115, 115, 115)
-Main.Active = true
-Main.Draggable = true
 
 AutoClick.Name = "AutoClick"
 AutoClick.Parent = Main
@@ -106,7 +104,7 @@ Tutorial.TextScaled = true
 Tutorial.TextSize = 14.000
 Tutorial.TextWrapped = true
 
-local function EAJW_fake_script()
+local function PXKUPY_fake_script()
 	local script = Instance.new('LocalScript', AutoClick)
 
 	local Background = script.Parent.background
@@ -131,8 +129,8 @@ local function EAJW_fake_script()
 		end
 	end)
 end
-coroutine.wrap(EAJW_fake_script)()
-local function MFPUUSV_fake_script()
+coroutine.wrap(PXKUPY_fake_script)()
+local function OQHTX_fake_script()
 	local script = Instance.new('Script', Title)
 
 	while true do
@@ -163,8 +161,8 @@ local function MFPUUSV_fake_script()
 		end
 		 end
 end
-coroutine.wrap(MFPUUSV_fake_script)()
-local function RKKR_fake_script() -- AntiAFK.LocalScript 
+coroutine.wrap(OQHTX_fake_script)()
+local function VEKEEI_fake_script() 
 	local script = Instance.new('LocalScript', AntiAFK)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -181,8 +179,8 @@ local function RKKR_fake_script() -- AntiAFK.LocalScript
 		})
 	end)
 end
-coroutine.wrap(QHHTR_fake_script)()
-local function TJCUHIC_fake_script()
+coroutine.wrap(VEKEEI_fake_script)()
+local function NQLYF_fake_script()
 	local script = Instance.new('LocalScript', Main)
 
 	local frame = script.Parent.Parent.Main
@@ -205,4 +203,4 @@ local function TJCUHIC_fake_script()
 		end
 	end)
 end
-coroutine.wrap(TJCUHIC_fake_script)()
+coroutine.wrap(NQLYF_fake_script)()
